@@ -1,27 +1,20 @@
 import React from "react"
 import ReactDOM from "react-dom"
 import "./styles.css"
+import Button from "./Button"
 
-function sum(a, b){
-    return a + b
+function soma(a, b){
+    alert(a + b)
 }
 
-function primeiroJSX (){
-    return (
-        <div className="teste"> 
-            Renan Martarelli - Introdução ao ReactJS
-            <h1>Soma: {sum(3, 4)}</h1>
-        </div>
-    )
-} 
-const App = () => {
+function App(){
 
     return (
         <div className="App">
-            {primeiroJSX()}
+            <Button onclick={() => soma(1, 5)} name="Renan Martarelli" />
         </div>
     )
 }
 
 const rootElement = document.getElementById("root")
-ReactDOM.render(<App/>, rootElement)
+ReactDOM.render(<App />, rootElement)
